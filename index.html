@@ -153,6 +153,8 @@
           </div>
         </div>
       </section>
+
+
       <section class="py-5 text-center container">
         <div class="row py-lg-5">
           <div class="col-lg-8 col-md-8 mx-auto">
@@ -160,8 +162,8 @@
           </div>
         </div>
       </section>
-      <div class="album py-5">
-        <!-- <div class="container"><div class="row"><div class="col"><img src="./website/head.jpg" class="img-fluid" alt="Responsive image"></div></div></div> -->
+
+      <div class="album py-5 bg-body-tertiary">
         <div class="container">
           <div class="row">
             <div class="col">
@@ -311,6 +313,13 @@
           </div>
         </div>
       </div>
+      <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+          <div class="col-lg-8 col-md-8 mx-auto">
+            <h1>Motion Editing</h1>
+          </div>
+        </div>
+      </section>
       <div class="album py-5 bg-body-tertiary">
         <div class="container">
           <div class="row">
@@ -414,16 +423,58 @@
                 </div>
               </div>
             </div>
+
+            
+
+
             <!-- <div class="col"><div class="card shadow-sm"><video id="inbtween_mdm" autoplay controls muted loop playsinline height="100%"><source src="./assets/in_between_mdm2.mp4" type="video/mp4"></video><div class="card-body"><p class="card-text">MDM</p><div class="d-flex justify-content-between align-items-center"><small class="text-body-secondary">(Not jump)</small></div></div></div></div> -->
+          </div>
+          <div class="album py-5 bg-body-tertiary">
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <h3>Long Sequence Generation:</h3>
+                  <h6>Generating long sequence motion by combining multiple motions as follow: 'A person is doing a salsa dance moving their legs and arms.', 'A figure sits on the chair.', 'a man jump forward.', 'A person punches as if they are boxing.', 'A person is stumbling while walking', 'A person is running forward in a long line.' <span style='color:#255F83'>Blue frames indicate the generated short motion sequences.</span>
+                    <span style='color:#660000'>Red frames indicate transition frames.</span>
+                  </h6>
+                </div>
+              </div>
+              <div class="card shadow-sm">
+                <video id="inbtween_mmm" class="custom-video-size" autoplay controls muted loop playsinline>
+                  <source src="./assets/longrange/longrange.mp4" type="video/mp4">
+                </video>
+                <div class="card-body mmm-card">
+                  <p class="card-text">BAMM (our)</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <small class="text-body-secondary">(Realistic Motion)</small>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="album py-5 bg-body-tertiary"><div class="container"><div class="row"><div class="col"><h3>Long Sequence Generation:</h3><h6>Generating long sequence motion by combining multiple motions as follow: 'A person is doing a salsa dance moving their legs and arms.', 'a figure sits on the chair.', 'a man jump forward.',
+                                'A person punches as if they are boxing.', 'A person is stumbling while walking', 'A person is running forward in a long line.'
+                                <span style='color:#660000'>Blue frames indicate the generated short motion sequences.</span><span style='color:#255F83'>Red frames indicate transition frames.</span></h6></div></div><div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2 justify-content-center"><div class="col"><div class="card shadow-sm"><video id="inbtween_mmm" autoplay controls muted loop playsinline height="100%"><source src="./assets/longrange/longrange.mp4" type="video/mp4"></video><div class="card-body mmm-card"><p class="card-text">BAMM (our)</p><div class="d-flex justify-content-between align-items-center"><small class="text-body-secondary">(Realistic Motion)</small></div></div></div></div> -->
+              <!-- <div class="col"><div class="card shadow-sm"><video id="inbtween_mdm" autoplay controls muted loop playsinline height="100%"><source src="./assets/in_between_mdm2.mp4" type="video/mp4"></video><div class="card-body"><p class="card-text">MDM</p><div class="d-flex justify-content-between align-items-center"><small class="text-body-secondary">(Not jump)</small></div></div></div></div> -->
+            </div>
           </div>
         </div>
       </div>
+      <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+          <div class="col-lg-8 col-md-8 mx-auto">
+            <h1>Length Diversity</h1>
+          </div>
+        </div>
+      </section>
       <div class="album py-5 bg-body-tertiary">
         <div class="container">
           <div class="row">
             <div class="col">
-              <h3>Length Diversity</h3>
-              <h6>Explores the impact of input text length on motion generation using the prompt <span style='color:#255F83'>“the person crouches and walks forward.”</span> (ground truth length: 196 frames). </h6>
+              <!-- <h3>Length Diversity</h3> -->
+              <h6>Given a text prompt, BAMM generates diverse motion sequences along with diverse sequence lengths. Denoising models, such as MoMask and MMM, face challenges to generate motion with the sequence length that is different from the ground-truth length . </h6>
+
+
+
+                Prompt : <span style='color:#255F83'>“the person crouches and walks forward.”</span> (ground truth length: 196 frames). 
               <ul>
                 <li>
                   <b>BAMM:</b> Realistic, diverse crouch-walk sequences; superior in motion fidelity.
@@ -466,7 +517,7 @@
                 </video>
                 <div class="card-body mmm-card">
                   <h6 class="card-text">BAMM</h6>
-                  <p>Performing crouches then walks, showcasing more realistic motion.</p>
+                  <p>performing crouches then walks, showcasing more realistic motion.</p>
                 </div>
               </div>
             </div>
@@ -477,7 +528,7 @@
                 </video>
                 <div class="card-body">
                   <h6 class="card-text">MoMask</h6>
-                  <p>Lacks crouching motion in the overall sequence.</p>
+                  <p>lacks crouching motion in the overall sequence.</p>
                 </div>
               </div>
             </div>
@@ -488,7 +539,7 @@
                 </video>
                 <div class="card-body">
                   <h6 class="card-text">MMM</h6>
-                  <p>No walking motion present in the sequence.</p>
+                  <p>no walking motion present in the sequence.</p>
                 </div>
               </div>
             </div>
@@ -503,7 +554,7 @@
                 </video>
                 <div class="card-body mmm-card">
                   <h6 class="card-text">BAMM</h6>
-                  <p>Features a crouch followed by more pronounced walking.</p>
+                  <p>features a crouch followed by more pronounced walking.</p>
                 </div>
               </div>
             </div>
@@ -514,7 +565,7 @@
                 </video>
                 <div class="card-body">
                   <h6 class="card-text">MoMask</h6>
-                  <p>Motion sequence is reversed: starts with walking then crouches.</p>
+                  <p>motion sequence is reversed: starts with walking then crouches.</p>
                 </div>
               </div>
             </div>
@@ -525,7 +576,7 @@
                 </video>
                 <div class="card-body">
                   <h6 class="card-text">MMM</h6>
-                  <p>Lacks any crouching motion in the sequence.</p>
+                  <p>lacks any crouching motion in the sequence.</p>
                 </div>
               </div>
             </div>
@@ -596,33 +647,7 @@
           </div>
         </div>
       </div>
-      <div class="album py-5 bg-body-tertiary">
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <h3>Long Sequence Generation:</h3>
-              <h6>Generating long sequence motion by combining multiple motions as follow: 'A person is doing a salsa dance moving their legs and arms.', 'a figure sits on the chair.', 'a man jump forward.', 'A person punches as if they are boxing.', 'A person is stumbling while walking', 'A person is running forward in a long line.' <span style='color:#255F83'>Blue frames indicate the generated short motion sequences.</span>
-                <span style='color:#660000'>Red frames indicate transition frames.</span>
-              </h6>
-            </div>
-          </div>
-          <div class="card shadow-sm">
-            <video id="inbtween_mmm" class="custom-video-size" autoplay controls muted loop playsinline>
-              <source src="./assets/longrange/longrange.mp4" type="video/mp4">
-            </video>
-            <div class="card-body mmm-card">
-              <p class="card-text">BAMM (our)</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <small class="text-body-secondary">(Realistic Motion)</small>
-              </div>
-            </div>
-          </div>
-          <!-- <div class="album py-5 bg-body-tertiary"><div class="container"><div class="row"><div class="col"><h3>Long Sequence Generation:</h3><h6>Generating long sequence motion by combining multiple motions as follow: 'A person is doing a salsa dance moving their legs and arms.', 'a figure sits on the chair.', 'a man jump forward.',
-                            'A person punches as if they are boxing.', 'A person is stumbling while walking', 'A person is running forward in a long line.'
-                            <span style='color:#660000'>Blue frames indicate the generated short motion sequences.</span><span style='color:#255F83'>Red frames indicate transition frames.</span></h6></div></div><div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2 justify-content-center"><div class="col"><div class="card shadow-sm"><video id="inbtween_mmm" autoplay controls muted loop playsinline height="100%"><source src="./assets/longrange/longrange.mp4" type="video/mp4"></video><div class="card-body mmm-card"><p class="card-text">BAMM (our)</p><div class="d-flex justify-content-between align-items-center"><small class="text-body-secondary">(Realistic Motion)</small></div></div></div></div> -->
-          <!-- <div class="col"><div class="card shadow-sm"><video id="inbtween_mdm" autoplay controls muted loop playsinline height="100%"><source src="./assets/in_between_mdm2.mp4" type="video/mp4"></video><div class="card-body"><p class="card-text">MDM</p><div class="d-flex justify-content-between align-items-center"><small class="text-body-secondary">(Not jump)</small></div></div></div></div> -->
-        </div>
-      </div>
+
       </div>
       <!-- 
         <div class="album py-5 bg-body-tertiary"><div class="container"><div class="row"><div class="col"><h3>Long Sequence Generation:</h3><h6>Generating long sequence motion by combining multiple motions as follow: 'A person is doing a salsa dance moving their legs and arms.', 'a figure sits on the chair.', 'a man jump forward.',
