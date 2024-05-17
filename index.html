@@ -143,10 +143,13 @@
         background-color: #ffffff;
         /* Or any other color code */
       }
+
+      video {
+        height: auto
+      }
     </style>
   </head>
   <body>
-    
     <main>
       <section class="py-5 text-center container">
         <div class="row py-lg-5">
@@ -655,7 +658,7 @@
                     </ul>
                   </div>
                 </div>
-                <h4 class="mt-4">196 Frame Sequences (Ground Truth)</h4>
+                <h4 class="mt-4">196 Frame Sequences (Ground Truth Length)</h4>
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2 justify-content-center">
                   <div class="col">
                     <div class="card shadow-sm">
@@ -674,7 +677,7 @@
                 </div>
                 <!-- Section for 184 frames -->
                 <h4 class="mt-4">184 Frame Sequences</h4>
-                <div class="row row-cols-1 row-cols-sm-3 row-cols-md-3 g-2">
+                <div class="row row-cols-1 row-cols-sm-3 row-cols-md-2 g-2">
                   <div class="col">
                     <div class="card shadow-sm">
                       <video id="bj" autoplay controls muted loop playsinline height="100%">
@@ -687,6 +690,8 @@
                       </div>
                     </div>
                   </div>
+
+                  
                   <div class="col">
                     <div class="card shadow-sm">
                       <video id="dance" autoplay controls muted loop playsinline height="100%">
@@ -695,6 +700,19 @@
                       <div class="card-body">
                         <h6 class="card-text">MoMask</h6>
                         <small class="text-body-secondary">(lacks crouching motion in the overall sequence.)</small>
+                        <!-- <p>lacks crouching motion in the overall sequence.</p> -->
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="card shadow-sm">
+                      <video id="dance" autoplay controls muted loop playsinline height="100%">
+                        <source src="./assets/diversity_length/T2M-GPT/184/T2M-GPT_crouch_walk_together_184_video.mp4" type="video/mp4">
+                      </video>
+                      <div class="card-body">
+                        <h6 class="card-text">T2M-GPT</h6>
+                        <small class="text-body-secondary">(sitting instead of crouches and unrealistic hand motion)</small>
                         <!-- <p>lacks crouching motion in the overall sequence.</p> -->
                       </div>
                     </div>
@@ -714,7 +732,7 @@
                 </div>
                 <!-- Section for 156 frames -->
                 <h4 class="mt-4">156 Frame Sequences</h4>
-                <div class="row row-cols-1 row-cols-sm-3 row-cols-md-3 g-2" style="margin-top: 20px">
+                <div class="row row-cols-1 row-cols-sm-3 row-cols-md-2 g-2" style="margin-top: 20px">
                   <div class="col">
                     <div class="card shadow-sm">
                       <video id="dance" autoplay controls muted loop playsinline height="100%">
@@ -735,6 +753,19 @@
                       <div class="card-body">
                         <h6 class="card-text">MoMask</h6>
                         <small class="text-body-secondary">(motion sequence is reversed: starts with walking then crouches.)</small>
+                        <!-- <p>motion sequence is reversed: starts with walking then crouches.</p> -->
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="card shadow-sm">
+                      <video id="dance" autoplay controls muted loop playsinline height="100%">
+                        <source src="./assets/diversity_length/T2M-GPT/156/T2M-GPT_crouch_walk_together_156_video.mp4" type="video/mp4">
+                      </video>
+                      <div class="card-body">
+                        <h6 class="card-text">MoMask</h6>
+                        <small class="text-body-secondary">(no crouches and walking)</small>
                         <!-- <p>motion sequence is reversed: starts with walking then crouches.</p> -->
                       </div>
                     </div>
@@ -852,9 +883,7 @@
                       </div>
                     </div>
                   </div>
-
                 </div>
-
               </div>
             </div>
           </div>
@@ -896,7 +925,6 @@
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
@@ -904,7 +932,7 @@
         <div class="album py-5 bg-body-tertiary"><div class="container"><div class="row"><div class="col"><h3>Long Sequence Generation:</h3><h6>Generating long sequence motion by combining multiple motions as follow: 'A person is doing a salsa dance moving their legs and arms.', 'a figure sits on the chair.', 'a man jump forward.',
                             'A person punches as if they are boxing.', 'A person is stumbling while walking', 'A person is running forward in a long line.'
                             <span style='color:#660000'>Blue frames indicate the generated short motion sequences.</span><span style='color:#255F83'>Red frames indicate transition frames.</span></h6></div></div><div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2 justify-content-center"><div class="col"><div class="card shadow-sm"><video id="longrange_true" autoplay controls muted loop playsinline height="100%"><source src="./assets/longrange/longrange.mp4" type="video/mp4"></video><div class="card-body mmm-card"><p class="card-text">BAMM (our)</p>
-																																																					<!-- <div class="d-flex justify-content-between align-items-center"><small class="text-body-secondary">(Realistic Motion)</small></div> -->
+																																																		<!-- <div class="d-flex justify-content-between align-items-center"><small class="text-body-secondary">(Realistic Motion)</small></div> -->
       </div>
       </div>
       </div>
